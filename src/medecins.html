@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Médecins - MedCare+</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="m-0 bg-gray-900 text-white text-[15px]" style="font-family: 'Poppins', sans-serif;">
+
+    <header class="w-[100%] h-[50px] flex items-center relative justify-center z-50">
+        <nav class="w-[80%] flex h-25 justify-around items-center ">
+            <a href="../index.html">
+                <div class="text-white font-bold">MED <span class="font-bold text-blue-500">Care+</span></div>
+            </a>
+
+            <a class="text-blue-500 mr-10 font-semibold transition-colors" href="medecins.html">Médecins</a>
+            <a class="text-[#eee] mr-10 hover:text-blue-500 transition-colors" href="">Rendez-vous</a>
+            <form class="form relative">
+                <button class="absolute left-2 -translate-y-1/2 top-1/2 p-1" type="button">
+                    <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-labelledby="search" class="w-5 h-5 text-gray-700">
+                        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                            stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+                </button>
+                <input id="searchInput"
+                    class="input rounded-full px-8 py-1 text-blue-500 border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-300 shadow-md"
+                    placeholder="Rechercher..." type="text" />
+                <button type="reset" class="absolute right-3 -translate-y-1/2 top-1/2 p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
+        </nav>
+    </header>
+
+    <div class="max-w-[80%] mx-auto mt-20 mb-8">
+        <div class="text-center">
+            <span id="subtitle" class="px-6 py-2 text-sm font-bold tracking-widest bg-blue-500/20 rounded-full border border-blue-400/40 text-blue-300 uppercase">
+                Notre Équipe Médicale
+            </span>
+            <h1 id="heading" class="font-extrabold text-5xl md:text-6xl lg:text-7xl mt-6 mb-4 bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent">
+                Nos Médecins
+            </h1>
+            <p id="description" class="text-gray-300 text-lg max-w-2xl mx-auto">
+                Découvrez notre équipe de professionnels de santé qualifiés et dévoués, prêts à prendre soin de vous.
+            </p>
+        </div>
+    </div>
+    
+    <div class="grid items-center justify-items-center min-h-[1000px] pb-12">
+        <div id="doctorsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 max-w-[90%]">
+        </div>
+    </div>
+
+    <script src="../public/asset/script.js"></script>
+
+</body>
+
+</html>

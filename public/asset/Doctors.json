@@ -1,0 +1,82 @@
+{
+  "pageInfo": {
+    "title": "Nos Médecins - MedCare+",
+    "heading": "Nos Médecins",
+    "subtitle": "Notre Équipe Médicale",
+    "description": "Découvrez notre équipe de professionnels de santé qualifiés et dévoués, prêts à prendre soin de vous."
+  },
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Samah Martin",
+      "specialty": "Cardiologue",
+      "image": "../public/images/doc01.jpg",
+      "availability": "unavailable",
+      "availabilityText": "Non Disponible",
+      "availabilityColor": "red"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Omar El Idrissi",
+      "specialty": "Dermatologist",
+      "image": "../public/images/doc02.jpg",
+      "availability": "available",
+      "availabilityText": "Disponible",
+      "availabilityColor": "green"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Ali Ford",
+      "specialty": "Pediatrician",
+      "image": "../public/images/doc03.jpg",
+      "availability": "busy",
+      "availabilityText": "Occupée",
+      "availabilityColor": "orange"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Houssem Ait Lahcen",
+      "specialty": "General Practitioner",
+      "image": "../public/images/doc04.jpg",
+      "availability": "available",
+      "availabilityText": "Disponible",
+      "availabilityColor": "green"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Imane El Amrani",
+      "specialty": "Gynecologist",
+      "image": "../public/images/doc05.jpg",
+      "availability": "available",
+      "availabilityText": "Disponible",
+      "availabilityColor": "green"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Karim Bensalem",
+      "specialty": "Neurologist",
+      "image": "../public/images/doc06.jpg",
+      "availability": "unavailable",
+      "availabilityText": "Non Disponible",
+      "availabilityColor": "red"
+    },
+    {
+      "id": 7,
+      "name": "Dr. Rachid El Fassi",
+      "specialty": "Orthopedic Surgeon",
+      "image": "../public/images/doc07.jpg",
+      "availability": "unavailable",
+      "availabilityText": "Non Disponible",
+      "availabilityColor": "red"
+    },
+    {
+      "id": 8,
+      "name": "Dr. Nadia Moujahid",
+      "specialty": "Ophthalmologist",
+      "image": "../public/images/doc08.jpg",
+      "availability": "busy",
+      "availabilityText": "Occupée",
+      "availabilityColor": "orange"
+    }
+  ]
+}

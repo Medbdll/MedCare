@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre Rendez-vous - MedCare+</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="m-0 bg-gray-900 text-white text-[15px]" style="font-family: 'Poppins', sans-serif;">
+
+    <header class="w-[100%] h-[50px] flex items-center relative justify-center z-50">
+        <nav class="w-[80%] flex h-25 justify-around items-center ">
+            <a href="index.html">
+                <div class="text-white font-bold">MED <span class="font-bold text-blue-500">Care+</span></div>
+            </a>
+
+            <a class="text-[#eee] mr-10 hover:text-blue-500" href="medecins.html">Médecins</a>
+            <a class="text-blue-500 mr-10 font-semibold" href="rendez-vous.html">Rendez-vous</a>
+            <form class="form relative">
+                <button class="absolute left-2 -translate-y-1/2 top-1/2 p-1" type="button">
+                    <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-labelledby="search" class="w-5 h-5 text-gray-700">
+                        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                            stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+                </button>
+                <input id="searchInput"
+                    class="input rounded-full px-8 py-1 text-blue-500 border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-300 shadow-md"
+                    placeholder="Rechercher..." type="text" />
+                <button type="reset" class="absolute right-3 -translate-y-1/2 top-1/2 p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
+        </nav>
+    </header>
+
+    <div class="max-w-[80%] mx-auto mt-20 mb-8">
+        <div class="text-center">
+            <span class="px-6 py-2 text-sm font-bold tracking-widest bg-blue-500/20 rounded-full border border-blue-400/40 text-blue-300 uppercase">
+                Réservation en Ligne
+            </span>
+            <h1 class="font-extrabold text-5xl md:text-6xl lg:text-7xl mt-6 mb-4 bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent">
+                Prendre Rendez-vous
+            </h1>
+            <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                Réservez votre consultation en quelques clics. Nos médecins sont disponibles pour vous accompagner.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-start pb-20 px-4">
+        <div class="w-full max-w-2xl">
+            <div class="bg-gray-800/50 backdrop-blur-lg rounded-3xl p-8 border border-blue-500/20 shadow-2xl">
+                <form id="appointmentForm" class="space-y-6">
+                    <div class="form-group">
+                        <label for="fullName" class="block text-sm font-semibold text-gray-200 mb-2">
+                            Nom complet *
+                        </label>
+                        <input type="text" id="fullName" name="fullName" required
+                            class="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300">
+                        <p class="error-message hidden text-red-400 text-sm mt-1"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="block text-sm font-semibold text-gray-200 mb-2">
+                            Adresse email *
+                        </label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300">
+                        <p class="error-message hidden text-red-400 text-sm mt-1"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="block text-sm font-semibold text-gray-200 mb-2">
+                            Téléphone *
+                        </label>
+                        <input type="tel" id="phone" name="phone" required
+                            placeholder="06 12 34 56 78"
+                            class="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300">
+                        <p class="error-message hidden text-red-400 text-sm mt-1"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor" class="block text-sm font-semibold text-gray-200 mb-2">
+                        </label>
+                        <select id="doctor" name="doctor" required
+                            class="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 cursor-pointer">
+                            <option value="">Sélectionnez un médecin</option>
+                            <option value="Dr. Sarah Martin">Dr. Sarah Martin - Cardiologue</option>
+                            <option value="Dr. Jean Dupont">Dr. Jean Dupont - Généraliste</option>
+                            <option value="Dr. Marie Laurent">Dr. Marie Laurent - Pédiatre</option>
+                            <option value="Dr. Pierre Dubois">Dr. Pierre Dubois - Dermatologue</option>
+                            <option value="Dr. Claire Bernard">Dr. Claire Bernard - Neurologue</option>
+                        </select>
+                        <p class="error-message hidden text-red-400 text-sm mt-1"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="date" class="block text-sm font-semibold text-gray-200 mb-2">
+                            Date du rendez-vous *
+                        </label>
+                        <input type="date" id="date" name="date" required
+                            class="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300">
+                        <p class="error-message hidden text-red-400 text-sm mt-1"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="time" class="block text-sm font-semibold text-gray-200 mb-2">
+                            Heure *
+                        </label>
+                        <select id="time" name="time" required
+                            class="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 cursor-pointer">
+                            <option value="">Sélectionnez une heure</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                            <option value="17:00">17:00</option>
+                        </select>
+                        <p class="error-message hidden text-red-400 text-sm mt-1"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason" class="block text-sm font-semibold text-gray-200 mb-2">
+                            Motif de consultation
+                        </label>
+                        <textarea id="reason" name="reason" rows="4"
+                            placeholder="Décrivez brièvement le motif de votre consultation..."
+                            class="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-blue-500/50 transform hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500/50">
+                        Confirmer le rendez-vous
+                    </button>
+                </form>
+            </div>
+            <div id="appointmentsList" class="mt-8 space-y-4 hidden">
+                <h2 class="text-2xl font-bold text-white mb-4">Mes rendez-vous</h2>
+                <div id="appointmentsContainer" class="space-y-3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="successModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 px-4">
+        <div class="bg-gray-800 rounded-3xl p-8 max-w-md w-full border border-blue-500/20 shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="modalContent">
+            <div class="text-center">
+                <div class="mx-auto w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">Rendez-vous confirmé !</h3>
+                <p class="text-gray-300 mb-6">Votre rendez-vous a été enregistré avec succès. Vous recevrez une confirmation par email.</p>
+                <button onclick="closeModal()" 
+                    class="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../public/asset/rdv.js"></script>
+        
+
+</body>
+
+</html>
