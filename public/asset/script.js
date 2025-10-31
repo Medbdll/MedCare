@@ -43,7 +43,7 @@ function getSearchParam() {
     return params.get('search') || '';
 }
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/public/asset/doctors.json')
+    fetch('../public/asset/Doctors.json')
         .then(res => {
             if (!res.ok) throw new Error('Failed to load');
             return res.json();
