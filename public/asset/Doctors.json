@@ -8,7 +8,7 @@
   "doctors": [
     {
       "id": 1,
-      "name": "Dr. Sara chetouane",
+      "name": "Dr. Sara boudlal",
       "specialty": "Cardiologue",
       "image": "public/images/doc01.jpg",
       "availability": "unavailable",
